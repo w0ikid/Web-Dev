@@ -1,0 +1,213 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #262626;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 350px;
+}
+
+.right-p {
+    width: 350px;
+}
+
+.image-section{
+    max-height: 600px;
+}
+
+form {
+    margin-top: 10px;
+    width: 280px;
+    border: 1px solid #8e8e8e;
+    padding: 100px 35px 20px;
+    border-radius: 2px;
+}
+
+input {
+    background-color: #262626;
+    width: 260px;
+    padding: 12px 7px;
+    margin: 3px 0;
+    border-radius: 2px;
+    font-size: 11px;
+    border: 1px solid #8e8e8e;
+    color: #fff;
+}
+
+#logo {
+    width: 190px;
+    margin: -60px 40px 30px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    background-color: #1586dd;
+    text-align: center;
+    width: 280px;
+    padding: 8px 0;
+    font-weight: bold;
+    color: white;
+    margin: 12px 0;
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    color: #8e8e8e;
+    font-size: 13px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 0.5px solid #b8b6b6;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+.facebook-login {
+    margin: 14px 0;
+}
+
+.facebook-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #0095F6;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.facebook-login img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.forgot-link {
+    padding: 12px 85px;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.forgot-link:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.signup-card {
+    border: 0.5px solid #e4e4e4;
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+    margin: 12px 0 20px;
+    width: 310px;
+}
+
+.signup-card span {
+    font-size: 12.5px;
+    color: #fff;
+}
+
+.signup-card a {
+    text-decoration: none;
+    color: #0095F6;
+    font-weight: bold;
+    
+}
+
+.signup-card a:visited {
+    text-decoration: none;
+    color: #0095F6;
+}
+
+.download-section {
+    text-align: center;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.download-section span {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.download-buttons img {
+    height: 40px;
+}
+
+.footer-links{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+li{
+    flex-wrap: wrap;
+    display: inline;
+    list-style-type: none;
+    color: #8A8D91;
+    margin: 0 8px;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+li a:link {
+    color: #8A8D91;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: #8A8D91;
+}
+
+footer {
+    height: 60px   ;
+}
+
+#language-options {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#language-options  select {
+    background-color: transparent; 
+    border: none;
+    color: #8e8e8e;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  #language-options span {
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-left: 10px;
+  }

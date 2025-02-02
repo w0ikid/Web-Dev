@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f0f2f5;
+}
+
+/* Контейнер */
+.container {
+    flex: 1; /* Контент заполняет всё доступное пространство */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: -80px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10%; /* Добавляем отступы, чтобы контент не прилипал к краям */
+    min-height: calc(100vh - 100px); /* Учитываем футер */
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    max-width: 600px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: -2vi;
+}
+
+.logo-text {
+    max-width: 500px;
+    font-size: 30px;
+    color: #1c1e21;
+    line-height: 1.1;
+}
+
+.login-form-container {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f5f6f7;
+}
+
+.login-form input:focus {
+    outline: none;
+    border: 1px solid #1877f2;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #1877f2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #1877f2;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #dddfe2;
+    margin: 10px 0;
+}
+
+.register-button {
+    width: 60%;
+    background-color: #42b72a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.create-page {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.create-page a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* Футер */
+footer {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #737373;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+} 
+
+.languages a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #737373;
+}
+
+.languages button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #737373;
+}
+
+/* Навигация */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.footer-links a {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #737373;
+    font-size: 12px;
+}

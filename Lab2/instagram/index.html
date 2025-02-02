@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-p">
+        <img class="image-section" src="Screenshot_2.png" />
+      </div>
+      <div class="right-p">
+        <div class="login-card">
+          <div class="right-p">
+            <form class="login-form">
+              <img
+                id="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1600px-Instagram_logo.svg.png"
+              />
+              <div class="input-group">
+                <input
+                  type="text"
+                  placeholder="Телефон, имя пользователя или эл. адрес"
+                  name="login"
+                  required
+                /><br />
+                <input
+                  type="password"
+                  placeholder="Пароль"
+                  name="password"
+                  required
+                /><br />
+              </div>
+
+              <button class="login-btn" type="submit">Войти</button><br />
+
+              <span class="divider">ИЛИ</span>
+
+              <div class="facebook-login">
+                <a
+                  href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DATCSbd8XU2N7iHbkvK1Vm8h4fcF6F4PCslbabCixZNhy7ywMQHOFSJ2rtVTl5zbq-PB_dlBKIxZ7xTZk-94RuqB2R9xOy1W4I4wXTGhGLWzyzGYCVITbMmOE0TPirGVjavAwi1F-pDz7BfNom4DklfCeU-_lC1DhTR8jDDsxg87I-BOCYjdNM9vvTVjWb2xMqVwX8lOVCspUmbqLnzPuOGvgL6FTnrmBqsOf4kP89CnZo-LdcX2ixlzsLAqgW98EOYuu"
+                  target="_blank"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"
+                    alt="Facebook Icon"
+                  />
+                  <span>Войти через Facebook</span>
+                </a>
+              </div>
+
+              <a
+                class="forgot-link"
+                href="https://www.instagram.com/accounts/password/reset/"
+                >Забыли пароль?</a
+              >
+            </form>
+
+            <div class="signup-card">
+              <span>У вас ещё нет аккаунта? </span>
+              <a href="https://www.instagram.com/accounts/emailsignup/"
+                >Зарегистрироваться</a
+              >
+            </div>
+
+            <div class="download-section">
+              <span>Установите приложение</span>
+              <div class="download-buttons">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3D72C0283D-5CE1-4A66-92B6-DAF2E4F16D09%26utm_campaign%3DunifiedHome%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge"
+                  target="_blank"
+                >
+                  <img
+                    src="https://static.cdninstagram.com/rsrc.php/v4/yr/r/fDjwyLC88oO.png"
+                    alt="Google Play"
+                  />
+                </a>
+                <a
+                  href="ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C0%2C1920%2C1030"
+                  target="_blank"
+                >
+                  <img
+                    src="https://static.cdninstagram.com/rsrc.php/v4/yv/r/_UbeIRgTpG-.png"
+                    alt="Microsoft Store"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <ul class="footer-links">
+        <li><a href="https://about.meta.com/">Meta</a></li>
+        <li><a href="https://about.instagram.com/">Информация</a></li>
+        <li><a href="https://about.instagram.com/blog/">Блог</a></li>
+        <li>
+          <a href="https://about.instagram.com/about-us/careers">Вакансии</a>
+        </li>
+        <li><a href="https://help.instagram.com/">Помощь</a></li>
+        <li>
+          <a href="https://developers.facebook.com/docs/instagram">API</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/legal/privacy/"
+            >Конфиденциальность</a
+          >
+        </li>
+        <li><a href="https://www.instagram.com/legal/terms/">Условия</a></li>
+        <li>
+          <a href="https://www.instagram.com/explore/locations/">Места</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/web/lite/">Instagram Lite</a>
+        </li>
+        <li><a href="https://www.threads.net/">Threads</a></li>
+        <li>
+          <a href="https://www.facebook.com/help/instagram/261704639352628"
+            >Загрузка контактов и лица, не являющиеся пользователями</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer"
+            >Meta Verified</a
+          >
+        </li>
+      </ul>
+
+      <ul id="language-options">
+        <li>
+          <select name="languages" id="select-lang">
+            <option value="Russian">Русский</option>
+            <option value="English">English</option>
+            <option value="Deutch">Deutch</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Polski">Polski</option>
+            <option value="Afrikaans">Afrikaans</option>
+            <option value="Nederlands">Nederlands</option>
+          </select>
+        </li>
+        <li>© 2023 Instagram from Meta</li>
+      </ul>
+    </footer>
+  </body>
+</html>

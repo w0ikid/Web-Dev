@@ -1,0 +1,176 @@
+body{
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.banner {
+    background-color: #0067b8;
+    padding: 2vh;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #262626;
+    font-size: 13px;
+    padding: 2vh 1vh;
+    border: 1px dashed #fff;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+a:active{
+    border: 1px dashed #262626;
+}
+h1{
+    margin: 0;
+}
+
+header{
+    padding: 1px 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    height: 3vh;
+}
+#container{
+    display: flex;
+    align-items: center;
+}
+#logo_link{
+    padding: 2vh;
+}
+#logo_link:active{
+    border: 1px dashed #262626;
+}
+#logo_link img{
+    height: 3vh;
+}
+#service_part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#service_part div{
+    display: flex;
+    align-items: center;
+}
+#cart{
+    display: flex;
+    align-items: center;
+}
+#cart_img{
+    height: 2vh;
+    width: 2vh;
+}
+#login:hover{
+    border: 1px dashed #262626;
+}
+#login a:hover{
+    border: none;
+}
+#login_img{
+    height: 3vh;
+}
+
+.slider{
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-AI-11Ed-Sapphire-MC001-3000x1682:VP5-1920x600);
+    background-size: cover;
+    padding: 10vh 56vw 20vh 5vw;
+}
+.slider div{
+    background-color: white;
+    padding: 6.5vh;
+}
+.slider div h1{
+    font-weight: 600;
+    font-size: 37px;
+}
+.shop{
+    border: none;
+    background-color: #0067b8;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0.3vh;
+}
+.shop a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 550;
+    font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+.shop a:hover{
+    text-decoration: none;
+}
+.shop div{
+    background-color: #0067b8;
+    padding: 1vh;
+    border: 3px dotted #0067b8;
+}
+.shop:hover{
+    background-color: #004a7f;
+}
+.shop div:hover{
+    background-color: #004a7f;
+    border-color: #004a7f;
+}
+.shop div:active{
+    text-decoration: none;
+    border-color: #fff;
+}
+
+#shopping{
+    display: flex;
+    justify-content: space-around;
+    margin: 7vh 10vh;
+}
+#shopping div{
+    display: flex;
+    flex-direction: column;
+}
+#shopping div img{
+    height: 5vh;
+}
+.a_shopping{
+    color: #0067b8;
+    text-decoration: 2px underline #0067b8;
+    font-weight: 600;
+    border: 3px dotted #fff;
+    padding: 0;
+    font-size: 15px;
+}
+.a_shopping:hover{
+    text-decoration: 2px underline #0067b8;
+}
+.a_shopping:active{
+    border: 3px dotted #0067b8;
+}
+
+#news{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5vw;
+}
+.news_div{
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 21vw;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .13);
+    padding-bottom: 2vh;
+}
+.news_div img{
+    width: 21vw;
+}
