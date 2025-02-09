@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демо flex-shrink</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            width: 400px; /* Ограниченная ширина контейнера */
+            background: lightgray;
+            padding: 10px;
+            gap: 10px;
+        }
+        
+        .box {
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .box.shrink-1 {
+            background: blue;
+            flex-shrink: 1; /* Обычное сжатие */
+        }
+        
+        .box.no-shrink {
+            background: red;
+            flex-shrink: 1; /* Этот элемент не сжимается */
+        }
+        
+        .box.shrink-2 {
+            background: green;
+            flex-shrink: 0; /* Этот элемент сжимается быстрее остальных */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box shrink-1">Shrink 1</div>
+        <div class="box no-shrink">No Shrink</div>
+        <div class="box shrink-2">Shrink 2</div>
+    </div>
+</body>
+</html>
