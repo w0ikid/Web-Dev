@@ -57,6 +57,9 @@ ul li {
   border-radius: 4px;
   margin-bottom: 5px;
   transition: background 0.3s;
+  word-wrap: break-word; /* позволяет переносить слова */
+  overflow-wrap: break-word; /* для совместимости */
+  max-width: 100%; /* ограничивает ширину */
 }
 ul li:hover {
   background: #f0f0f0;
