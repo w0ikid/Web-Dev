@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doni Pepperoni Jumping</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffcc00, #ff6600);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .pizza-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pizza {
+            font-size: 100px;
+            position: relative;
+            animation: jump 2s infinite cubic-bezier(0.28, 1.15, 0.32, 1);
+            transform-origin: center;
+        }
+
+        .face {
+            position: absolute;
+            top: 30px;
+            left: 25px;
+            width: 50px;
+            height: 30px;
+        }
+
+        .eyes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .eye {
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            animation: blink 4s infinite ease-in-out;
+        }
+
+        .mouth {
+            width: 20px;
+            height: 10px;
+            background: black;
+            border-radius: 0 0 10px 10px;
+            margin: 5px auto;
+            transition: transform 0.3s;
+            animation: talk 2s infinite alternate ease-in-out;
+        }
+
+        .shadow {
+            width: 80px;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -10px;
+            animation: shadowScale 2s infinite ease-in-out;
+        }
+
+        @keyframes jump {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(-5deg); }
+        }
+
+        @keyframes shadowScale {
+            0%, 100% { transform: scaleX(1); opacity: 0.5; }
+            50% { transform: scaleX(1.5); opacity: 0.2; }
+        }
+
+        @keyframes blink {
+            0%, 90% { transform: scaleY(1); }
+            95% { transform: scaleY(0.1); }
+            100% { transform: scaleY(1); }
+        }
+
+        @keyframes talk {
+            0% { transform: scaleY(1); }
+            100% { transform: scaleY(0.5); }
+        }
+    </style>
+</head>
+<body>
+    <div class="pizza-container">
+        <div class="pizza">
+            🍕
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
