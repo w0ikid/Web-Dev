@@ -1,12 +1,21 @@
+<div>
+<label for="category">Выберите категорию:</label>
+<select id="category" [(ngModel)]="selectedCategory">
+    <option value="all">Все</option>
+    <option value="phones">Телефоны</option>
+    <option value="drinks">Напитки</option>
+</select>
+</div>
+
 <div class="products-container">
-    <div class="product" *ngFor="let product of products">
-        <img [src]="product.image" alt="{{ product.name }}">
-        <h3>{{ product.name }}</h3>
-        <p class="product-description">{{ product.description }}</p>
-        <p>Rating: {{ product.rating }}</p>
-        <div class="button-container">
-            <button class="whatsapp-button" (click)="shareViaWhatsApp(product.link)">WhatsApp</button>
-            <button class="telegram-button" (click)="shareViaTelegram(product.link)">Telegram</button>
-        </div>
+<div class="product" *ngFor="let product of filteredProducts">
+    <img [src]="product.image" alt="{{ product.name }}">
+    <h3>{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    <p>Rating: {{ product.rating }}</p>
+    <div class="button-container">
+    <button class="whatsapp-button" (click)="shareViaWhatsApp(product.link)">WhatsApp</button>
+    <button class="telegram-button" (click)="shareViaTelegram(product.link)">Telegram</button>
     </div>
+</div>
 </div>
