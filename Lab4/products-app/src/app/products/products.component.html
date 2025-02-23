@@ -1,21 +1,26 @@
 <div>
-<label for="category">Выберите категорию:</label>
-<select id="category" [(ngModel)]="selectedCategory">
-    <option value="all">Все</option>
-    <option value="phones">Телефоны</option>
-    <option value="drinks">Напитки</option>
-</select>
-</div>
-
-<div class="products-container">
-<div class="product" *ngFor="let product of filteredProducts">
-    <img [src]="product.image" alt="{{ product.name }}">
-    <h3>{{ product.name }}</h3>
-    <p class="product-description">{{ product.description }}</p>
-    <p>Rating: {{ product.rating }}</p>
-    <div class="button-container">
-    <button class="whatsapp-button" (click)="shareViaWhatsApp(product.link)">WhatsApp</button>
-    <button class="telegram-button" (click)="shareViaTelegram(product.link)">Telegram</button>
+    <label for="category">Выберите категорию:</label>
+    <select id="category" [(ngModel)]="selectedCategory">
+        <option value="all">Все</option>
+        <option value="phones">Телефоны</option>
+        <option value="drinks">Напитки</option>
+        <option value="mice">Мышки</option>
+        <option value="vinil">Виниловый проигрыватель</option>
+    </select>
     </div>
-</div>
+    
+    <div class="products-container">
+    <div class="product" *ngFor="let product of filteredProducts">
+        <img [src]="product.image" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        <p>Rating: {{ product.rating }}</p>
+        <p class="likes-count">Likes: {{ product.likes }}</p>
+        <div class="button-container">
+            <button class="like-button" (click)="incrementLikes(product)">Like</button>
+            <button class="remove-button" (click)="removeProduct(product)">Remove</button>
+            <button class="whatsapp-button" (click)="shareViaWhatsApp(product.link)">WhatsApp</button>
+            <button class="telegram-button" (click)="shareViaTelegram(product.link)">Telegram</button>
+        </div>
+    </div>
 </div>

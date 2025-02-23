@@ -1,88 +1,166 @@
 .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 40px;
-  }
-  
-  .product {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 250px;
-    background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .product:hover {
-    transform: scale(1.05);
-  }
-  
-  .product img {
-      max-width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-  }
-  
-  h3 {
-    font-size: 20px;
-    margin: 10px 0;
-  }
-  
-  p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .product-description {
-    max-height: 60px; /* Ограничение высоты описания */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Ограничение количества строк */
-    -webkit-box-orient: vertical;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-    font-weight: bold;
-    color: white;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-  }
-  
-  .whatsapp-button {
-    background-color: #25D366;
-  }
-  
-  .whatsapp-button:hover {
-    background-color: #1da851;
-  }
-  
-  .telegram-button {
-    background-color: #0088cc;
-  }
-  
-  .telegram-button:hover {
-    background-color: #0077b5;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  background: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  max-height: 60px; /* Ограничение высоты описания */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничение количества строк */
+  -webkit-box-orient: vertical;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+.telegram-button {
+  background-color: #0088cc;
+}
+
+.telegram-button:hover {
+  background-color: #0077b5;
+}
+.likes-count {
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 5px 0;
+}
+
+.like-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Optional: Enhance existing styles */
+.product {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+select {
+  appearance: none; /* Убираем стандартный стиль */
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 250px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23007bff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+}
+
+select:hover {
+  border-color: #0056b3;
+}
+
+select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
+}
+
+option {
+  font-weight: normal;
+  background: #fff;
+  color: #333;
+}
+
