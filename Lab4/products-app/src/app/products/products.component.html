@@ -12,7 +12,12 @@
     <div class="products-container">
     <div class="product" *ngFor="let product of filteredProducts">
         <img [src]="product.image" alt="{{ product.name }}">
-        <h3>{{ product.name }}</h3>
+        <!-- <h3>
+            <a (click)="openProductDetails(product.id)" style="cursor: pointer; color: blue;">{{ product.name }}</a>
+        </h3> -->
+        <h3>
+            <a [routerLink]="['/product', product.id]" target="_blank">{{ product.name }}</a>
+        </h3>
         <p class="product-description">{{ product.description }}</p>
         <p>Rating: {{ product.rating }}</p>
         <p class="likes-count">Likes: {{ product.likes }}</p>
@@ -21,6 +26,7 @@
             <button class="remove-button" (click)="removeProduct(product)">Remove</button>
             <button class="whatsapp-button" (click)="shareViaWhatsApp(product.link)">WhatsApp</button>
             <button class="telegram-button" (click)="shareViaTelegram(product.link)">Telegram</button>
+
         </div>
     </div>
 </div>

@@ -1,0 +1,33 @@
+div {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
