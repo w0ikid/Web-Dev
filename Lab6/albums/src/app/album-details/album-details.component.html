@@ -1,0 +1,18 @@
+<div class="album-details">
+    <h2>Album Detail #{{ album.id }}</h2>
+    <h4 class="album-title">{{ album.title }}</h4>
+  
+
+    <div class="edit-section">
+      <label for="title">Edit Title:</label>
+      <input type="text" id="title" [(ngModel)]="title" placeholder="Enter new title">
+      <button class="save-btn" (click)="saveTitle()">Save</button>
+    </div>
+  
+
+    <div class="buttons">
+      <button routerLink="/albums" class="nav-btn">Return Back</button>
+      <button routerLink="/albums/{{album.id}}/photos" class="nav-btn">View Photos</button>
+    </div>
+  </div>
+  

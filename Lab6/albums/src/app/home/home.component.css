@@ -1,0 +1,262 @@
+nav {
+  background-color: #333;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo svg, .logo img {
+  margin-right: 10px;
+}
+
+/* Основной контейнер с обновленным фоном и геометрическими фигурами */
+.home-container {
+  position: relative;
+  max-width: 100%;
+  height: calc(100vh - 80px);
+  margin: 0;
+  padding: 60px 40px;
+  background: linear-gradient(120deg, #e0e5ec 0%, #f2f4f8 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Геометрические фигуры для фона */
+.home-container::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(79, 101, 185, 0.05);
+  top: -200px;
+  right: -150px;
+  border-radius: 35% 65% 60% 40% / 30% 30% 70% 70%;
+  z-index: -1;
+  animation: morphShape 15s ease-in-out infinite alternate;
+}
+
+.home-container::after {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: rgba(40, 57, 101, 0.07);
+  bottom: -100px;
+  left: -150px;
+  border-radius: 65% 35% 40% 60% / 70% 70% 30% 30%;
+  z-index: -1;
+  animation: morphShape 17s ease-in-out infinite alternate-reverse;
+}
+
+/* Плавающие геометрические элементы */
+.floating-shape-1, .floating-shape-2, .floating-shape-3 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.floating-shape-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #4f65b9;
+  right: 15%;
+  top: 20%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: float 12s ease-in-out infinite;
+}
+
+.floating-shape-2 {
+  width: 80px;
+  height: 80px;
+  background-color: #283965;
+  left: 15%;
+  bottom: 20%;
+  border-radius: 50%;
+  animation: float 10s ease-in-out 2s infinite reverse;
+}
+
+.floating-shape-3 {
+  width: 60px;
+  height: 60px;
+  background-color: #4f65b9;
+  right: 25%;
+  bottom: 15%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: float 15s ease-in-out 1s infinite;
+}
+
+/* Анимации морфинга и плавания фигур */
+@keyframes morphShape {
+  0% {
+    border-radius: 35% 65% 60% 40% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+  }
+  100% {
+    border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%;
+  }
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, 15px) rotate(5deg); }
+  50% { transform: translate(5px, -10px) rotate(-5deg); }
+  75% { transform: translate(-10px, 5px) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Стили для заголовка с более серьезным видом */
+.home-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #283965;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: fadeDown 1s ease-out;
+  position: relative;
+}
+
+/* Линия под заголовком */
+.home-container h1::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f65b9, #283965);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: expandLine 1.5s ease-out forwards;
+}
+
+@keyframes expandLine {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+/* Стили для параграфа */
+.home-container p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 25px auto;
+  line-height: 1.6;
+  animation: fadeUp 1.2s ease-out;
+}
+
+/* Анимации появления текста */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Контейнер для кнопок */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Стили для кнопок с более сдержанным дизайном */
+.nav-btn, 
+a[routerLink="/about"], 
+a[routerLink="/albums"] {
+  display: inline-block;
+  padding: 14px 35px;
+  background: linear-gradient(to right, #4f65b9, #5d70c2);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(79, 101, 185, 0.3);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Эффект наведения для кнопок */
+.nav-btn:hover, 
+a[routerLink="/about"]:hover, 
+a[routerLink="/albums"]:hover {
+  box-shadow: 0 5px 15px rgba(79, 101, 185, 0.4);
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #3e51a3, #4f65b9);
+}
+
+/* Анимация для кнопок при наведении */
+.nav-btn::after,
+a[routerLink="/about"]::after, 
+a[routerLink="/albums"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.nav-btn:hover::after,
+a[routerLink="/about"]:hover::after, 
+a[routerLink="/albums"]:hover::after {
+  left: 100%;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 40px 20px;
+    height: auto;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .floating-shape-1,
+  .floating-shape-2,
+  .floating-shape-3 {
+    transform: scale(0.7);
+  }
+}

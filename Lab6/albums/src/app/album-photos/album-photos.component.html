@@ -1,0 +1,14 @@
+<div class="photos-container">
+  <h1>Photo Gallery</h1>
+
+  <button class="return-btn" routerLink="/albums/{{ id }}">Return Back</button>
+
+  <ul class="photo-list">
+    <li *ngFor="let photo of photos" class="photo-card">
+      <h2>{{ photo.id }}</h2>
+      <p class="photo-title">{{ photo.title }}</p>
+      <img [src]="photo.thumbnailUrl" class="thumbnail" alt="Thumbnail" />
+      <img [src]="photo.url" class="full-image" alt="Full-size Image" />
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,27 @@
+<h1>Albums List</h1>
+
+
+<div class="album-form">
+  <input type="text" [(ngModel)]="newAlbum.title" placeholder="Enter album title">
+  <button (click)="addAlbum()">Add Album</button>
+</div>
+
+
+<ul class="album-list">
+  <li *ngFor="let album of albums" class="album-item">
+    <div class="album-header">
+      <a routerLink="/albums/{{album.id}}" class="album-title">
+        {{album.id}}. {{album.title}}
+      </a>
+      <button class="delete-btn" (click)="deleteAlbum(albums.indexOf(album))">
+        DELETE
+      </button>
+    </div>
+
+    <div class="edit-section">
+      <label>Edit Title:</label>
+      <input type="text" [(ngModel)]="title" placeholder="New title">
+      <button class="save-btn" (click)="putAlbum(album)">Save</button>
+    </div>
+  </li>
+</ul>

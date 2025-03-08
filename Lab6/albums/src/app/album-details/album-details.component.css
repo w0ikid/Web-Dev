@@ -1,0 +1,77 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--accent-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.album-details {
+  background: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  text-align: center;
+}
+
+.album-title {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-section label {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.edit-section input {
+  width: 80%;
+  padding: 8px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.save-btn, .nav-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.nav-btn {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+.nav-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
