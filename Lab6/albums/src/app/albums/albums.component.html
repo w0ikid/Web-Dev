@@ -1,5 +1,8 @@
 <h1>Albums List</h1>
 
+<div class="floating-shape-1"></div>
+<div class="floating-shape-2"></div>
+<div class="floating-shape-3"></div>
 
 <div class="album-form">
   <input type="text" [(ngModel)]="newAlbum.title" placeholder="Enter album title">
@@ -20,8 +23,70 @@
 
     <div class="edit-section">
       <label>Edit Title:</label>
-      <input type="text" [(ngModel)]="title" placeholder="New title">
+      <input type="text" [(ngModel)]="editTitles[album.id]" placeholder="New title">
       <button class="save-btn" (click)="putAlbum(album)">Save</button>
     </div>
   </li>
 </ul>
+
+<style>
+.floating-shape-1, .floating-shape-2, .floating-shape-3 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.floating-shape-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #4f65b9;
+  right: 15%;
+  top: 20%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: float 12s ease-in-out infinite;
+}
+
+.floating-shape-2 {
+  width: 80px;
+  height: 80px;
+  background-color: #283965;
+  left: 15%;
+  bottom: 20%;
+  border-radius: 50%;
+  animation: float 10s ease-in-out 2s infinite reverse;
+}
+
+.floating-shape-3 {
+  width: 60px;
+  height: 60px;
+  background-color: #4f65b9;
+  right: 25%;
+  bottom: 15%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: float 15s ease-in-out 1s infinite;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandLine {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, 15px) rotate(5deg); }
+  50% { transform: translate(5px, -10px) rotate(-5deg); }
+  75% { transform: translate(-10px, 5px) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+</style>

@@ -12,6 +12,7 @@ export class AlbumsComponent {
   albums: Album[];
   newAlbum : Album;
   title : string;
+  editTitles: {[id: number]: string} = {};
   constructor(private albumsService: AlbumsService) {
     this.albums = [];
     this.newAlbum = {} as Album;
@@ -41,11 +42,16 @@ export class AlbumsComponent {
     });
   }
 
+  startEdit(album: Album) {
+    this.editTitles[album.id] = album.title;
+  }
+  
   putAlbum(album: Album) {
-    album.title = this.title;
+    album.title = this.editTitles[album.id];
     this.albumsService.putAlbums(album).subscribe((album) => {
       console.log(album.title);
     });
-    this.title = '';
+    // Очистка значения редактирования после обновления
+    delete this.editTitles[album.id];
   }
 }
