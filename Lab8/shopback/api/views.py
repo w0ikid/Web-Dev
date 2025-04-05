@@ -124,3 +124,4 @@ def category_products(request, id):
             for product in products
         ]
         return JsonResponse({'category': category.name, 'products': products_data})
+    
